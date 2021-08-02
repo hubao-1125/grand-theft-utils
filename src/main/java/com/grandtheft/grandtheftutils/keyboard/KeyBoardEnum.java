@@ -22,7 +22,8 @@ public enum KeyBoardEnum {
     F9(9, "F9"),
     F10(10, "F10"),
     F11(11, "F11"),
-    F12(12, "F12")
+    F12(12, "F12"),
+    BSL(13, "back_slash")
 
     ;
     private int val;

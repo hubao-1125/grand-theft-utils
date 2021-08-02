@@ -23,7 +23,8 @@ public class KeyBoardAllRegister {
         instance.registerHotKey(KeyBoardEnum.F9.getVal(), KeyBoardEnum.F9.getKeyStr());
         instance.registerHotKey(KeyBoardEnum.F10.getVal(), KeyBoardEnum.F10.getKeyStr());
         instance.registerHotKey(KeyBoardEnum.F11.getVal(), KeyBoardEnum.F11.getKeyStr());
-        instance.registerHotKey(KeyBoardEnum.F12.getVal(), KeyBoardEnum.F12.getKeyStr());
+        instance.registerHotKey(KeyBoardEnum.BSL.getVal(), KeyBoardEnum.BSL.getKeyStr());
+//        instance.registerHotKey(KeyBoardEnum.F12.getVal(), KeyBoardEnum.F12.getKeyStr());
 
 //        JIntellitype.getInstance().registerHotKey(KeyBoardEnum.F1.getVal(), KeyBoardEnum.F1.getKeyStr());
 //        JIntellitype.getInstance().registerHotKey(KeyBoardEnum.F1.getVal(), KeyBoardEnum.F1.getKeyStr());

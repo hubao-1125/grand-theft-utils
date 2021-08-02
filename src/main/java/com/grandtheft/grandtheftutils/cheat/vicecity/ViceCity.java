@@ -46,27 +46,50 @@ public class ViceCity implements Serializable {
         frame.pack();
         frame.setVisible(true);
 
+        // 注册按键
         KeyBoardAllRegister.registerKeyboard();
+        // 创建热键监听器
         JIntellitype.getInstance().addHotKeyListener(new HotkeyListener() {
             public void onHotKey(int markCode) {
-
+                System.out.println("markCode:::" + markCode);
                 KeyBoardEnum boardEnum = KeyBoardEnum.getKeyBoardEnumByMarkCode(markCode);
-
                 try {
                     switch (boardEnum) {
                         case F1:
-                            System.out.println("111111111111111111");
                             ViceCityCode.ASPIRINE();
                             break;
                         case F2:
-                            System.out.println("22222222222222222");
+                            ViceCityCode.PRECIOUSPROTECTION();
                             break;
                         case F3:
-                            System.out.println("333333333333333333");
+                            ViceCityCode.THUGSTOOLS();
                             break;
                         case F4:
-                            System.out.println("44444444444444444");
                             ViceCityCode.PROFESSIONALTOOLS();
+                            break;
+                        case F5:
+                            ViceCityCode.NUTTERTOOLS();
+                            break;
+                        case F6:
+                            ViceCityCode.BIGBANG();
+                            break;
+                        case F7:
+                            ViceCityCode.PANZER();
+                            break;
+                        case F8:
+                            ViceCityCode.SEAWAYS();
+                            break;
+                        case F9:
+                            ViceCityCode.GETTHEREAMAZINGLYFAST();
+                            break;
+                        case F10:
+                            ViceCityCode.GETTHEREVERYFASTINDEED();
+                            break;
+                        case F11:
+                            ViceCityCode.GETTHEREQUICKLY();
+                            break;
+                        case BSL:
+                            ViceCityCode.LEAVEMEALONE();
                             break;
                         default:
                             System.out.println("00000000000000");
@@ -78,24 +101,17 @@ public class ViceCity implements Serializable {
         });
 
 
-        Toolkit.getDefaultToolkit().addAWTEventListener(new AWTEventListener() {
-            public void eventDispatched(AWTEvent event) {
-                if (((KeyEvent) event).getID() == KeyEvent.KEY_PRESSED) {
-                    int keyCode = ((KeyEvent) event).getKeyCode();
+//        Toolkit.getDefaultToolkit().addAWTEventListener(new AWTEventListener() {
+//            public void eventDispatched(AWTEvent event) {
+//                if (((KeyEvent) event).getID() == KeyEvent.KEY_PRESSED) {
+//                    int keyCode = ((KeyEvent) event).getKeyCode();
 //                    char keyChar = ((KeyEvent) event).getKeyChar();
-                    if (keyCode == KeyEvent.VK_F1) {
-                        System.out.println("F111111111111111111111111");
-                        try {
-                            Robot robot = new Robot();
-//                            robot.keyPress(keyCode);
-                        } catch (AWTException e) {
-                            e.printStackTrace();
-                        }
-                    } else if (keyCode == KeyEvent.VK_F2) {
-                        System.out.println("F2222222222222222222222");
-                    }
-                }
-            }
-        }, AWTEvent.KEY_EVENT_MASK);
+//                    System.out.println(keyCode);
+//                    if (keyCode == KeyEvent.VK_F1) {
+//                        System.out.println("F1");
+//                    }
+//                }
+//            }
+//        }, AWTEvent.KEY_EVENT_MASK);
     }
 }
